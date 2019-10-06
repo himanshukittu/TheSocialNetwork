@@ -1,0 +1,66 @@
+<mat-toolbar color="warn">
+    <mat-toolbar-row>
+        <span style="text-align: center;">
+            Funkers
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span>
+            <input type="search" name="searchUser" id="" class="search-bar-config">
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span *ngIf="userName">Hello {{userName.split('')[0] | titlecase}} </span>
+        <span *ngIf="!userName">Welcome guest !!</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<hr style="color: white; margin: 0px auto 0px auto;">
+
+<mat-expansion-panel style="background-color: rgba(212, 206, 206, 0.767); border-radius: 0px !important;">
+    <mat-expansion-panel-header>
+        
+    </mat-expansion-panel-header>
+    <br>
+    <mat-panel-description style="color: black;">
+        <span>
+            <button mat-mini-fab matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+                <img src="../../../assets/love.png" class="img-dimension" alt="">
+            </button>
+        </span>
+
+        <span class="fill-remaining-space"></span>
+        <span>
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+                <img src="../../../assets/cafe.png" class="img-dimension" alt="">
+                Nearby
+            </button>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span>
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+                <img src="../../../assets/bell.png" class="img-dimension" alt="">
+                Notification
+            </button>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span>
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+                <img src="../../../assets/friends.png" class="img-dimension" alt="">
+                Followers
+            </button>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span>
+            <button mat-stroked-button color="primary">
+                <img src="../../../assets/settings.png" alt="" class="img-dimension"> Settings
+            </button>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span>
+            <button mat-stroked-button color="warn">
+                    Logout&nbsp;<img src="../../../assets/logout.png" class="img-dimension" alt="">                
+            </button>
+        </span>
+
+    </mat-panel-description>
+
+</mat-expansion-panel>
