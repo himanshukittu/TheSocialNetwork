@@ -15,3 +15,11 @@
 .img-dimension{
     width:25px;
 }
+.img-dimension-sm{
+    width:15px;
+}
+.mat-basic-chip{
+    height: 5px !important;
+    width: auto;
+    background-color: red;
+}

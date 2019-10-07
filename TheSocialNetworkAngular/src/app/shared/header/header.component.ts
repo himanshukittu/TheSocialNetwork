@@ -7,12 +7,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() userName;
-  showPanel: boolean = false;
+  userName;
+  @Input() numNotification;
+  @Input() request;
+  @Input() message;
+
+  isLoggedin:boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    if(localStorage.getItem("userInfo"))
+    {
+      this.isLoggedin = true;
+      this.userName=localStorage.getItem("userInfo");
+    }
   }
 
 }

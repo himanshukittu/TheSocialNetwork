@@ -1,24 +1,42 @@
-<mat-toolbar color="warn">
+<mat-toolbar color="accent">
     <mat-toolbar-row>
         <span style="text-align: center;">
-            Funkers
+            F.R.I.E.N.D.S
         </span>
         <span class="fill-remaining-space"></span>
         <span>
             <input type="search" name="searchUser" id="" class="search-bar-config">
         </span>
         <span class="fill-remaining-space"></span>
-        <span *ngIf="userName">Hello {{userName.split('')[0] | titlecase}} </span>
+        <span *ngIf="userName">Hello, {{userName.split(' ')[0] | titlecase}} </span>
         <span *ngIf="!userName">Welcome guest !!</span>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <hr style="color: white; margin: 0px auto 0px auto;">
 
-<mat-expansion-panel style="background-color: rgba(212, 206, 206, 0.767); border-radius: 0px !important;">
-    <mat-expansion-panel-header>
-        
+<mat-expansion-panel *ngIf="isLoggedin" style="box-shadow: none; background-color: rgba(231, 229, 229, 0.767); border-radius: 0px !important;">
+    <mat-expansion-panel-header [collapsedHeight]="'40px'" [expandedHeight]="'40px'">
+        <span class="fill-remaining-space"></span>
+        <span style="margin-right: 1%;">
+                <mat-chip-list>
+                        <mat-chip color="accent" selected>
+                            <img src="../../../assets/bell.png" alt="" class="img-dimension-sm">&nbsp;
+                            {{(numNotification)?numNotification:0}}
+                        </mat-chip>
+                        <mat-chip color="accent" selected>
+                            <img src="../../../assets/friends.png" alt="" class="img-dimension-sm">&nbsp;
+                            {{(request)?request:0}}
+                        </mat-chip>
+                        <mat-chip color="accent" selected>
+                                <img src="../../../assets/love.png" alt="" class="img-dimension-sm">&nbsp;
+                                {{(message)?message:0}}
+                        </mat-chip>
+                    </mat-chip-list>
+        </span>
+        <!-- <span class="fill-remaining-space"></span> -->
     </mat-expansion-panel-header>
+    <!-- <hr style="color: white; margin: 0px 0px 0px 0px;"> -->
     <br>
     <mat-panel-description style="color: black;">
         <span>
@@ -29,21 +47,24 @@
 
         <span class="fill-remaining-space"></span>
         <span>
-            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after"
+                matBadgeSize="small">
                 <img src="../../../assets/cafe.png" class="img-dimension" alt="">
                 Nearby
             </button>
         </span>
         <span class="fill-remaining-space"></span>
         <span>
-            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after"
+                matBadgeSize="small">
                 <img src="../../../assets/bell.png" class="img-dimension" alt="">
                 Notification
             </button>
         </span>
         <span class="fill-remaining-space"></span>
         <span>
-            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after" matBadgeSize="small">
+            <button mat-stroked-button color="primary" matBadge="22" matBadgePosition="above after"
+                matBadgeSize="small">
                 <img src="../../../assets/friends.png" class="img-dimension" alt="">
                 Followers
             </button>
@@ -57,7 +78,7 @@
         <span class="fill-remaining-space"></span>
         <span>
             <button mat-stroked-button color="warn">
-                    Logout&nbsp;<img src="../../../assets/logout.png" class="img-dimension" alt="">                
+                Logout&nbsp;<img src="../../../assets/logout.png" class="img-dimension" alt="">
             </button>
         </span>
 
