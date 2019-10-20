@@ -1,0 +1,48 @@
+.grid-list-config{
+    height: 90%;
+}
+
+.matCard-config
+{
+    background-image: linear-gradient(to left, lightgreen,skyblue);  
+    height: 100%;
+    width: 100%;
+}
+
+.custom-card
+{
+    /* background-image: linear-gradient(to right, rgb(235, 194, 57),rgba(54, 223, 194, 0.685));   */
+    background-color: rgba(0, 139, 104, 0.61);
+    border-radius: 20px;
+    height: 70%;
+    width: 70%;
+}
+
+.registerImage
+{
+    cursor: pointer;
+}
+
+input
+{
+    border: none;
+    width: 340px;
+    height: 40px;
+    border-radius: 30px; 
+    padding-left:10px; 
+    font-family: "Century Gothic";
+    font-size: 15px;
+}
+input:focus{
+    outline: none;
+}
+.label
+{
+    font-size: 18px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

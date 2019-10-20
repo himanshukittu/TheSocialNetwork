@@ -1,1 +1,103 @@
-<p>sign-in-up works!</p>
+<mat-grid-list cols="12" class="grid-list-config" rowHeight="fit">
+    <mat-grid-tile colspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="4">
+        <mat-card class="custom-card" style="height: fit-content !important;">
+            <mat-card-header>
+                <mat-card-title>Login</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <label for="username" class="label">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username"><br><br>
+                    <label for="password" class="label">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password">
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <div>
+                    <span style="float: left;">
+                        <button style="margin-left: 10px; background-color: #000c14; margin-bottom: 10px;"
+                            mat-raised-button>Login</button>
+                    </span>
+                    <span *ngIf="isInvalid"
+                        style="float: right; color: rgba(255, 94, 0, 0.884); margin: 5px 20px auto auto;">Invalid
+                        username or password</span>
+                </div>
+            </mat-card-actions><br>
+            <div>
+                <img src="../../../assets/google.png" class="registerImage" alt=""
+                    title="login via google">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../../../assets/facebook.png" class="registerImage" alt=""
+                    title="login via facebook">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../../../assets/linkedin.png" class="registerImage" alt=""
+                    title="logon via linkedin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="../../../assets/twitter.png" class="registerImage" alt="" title="login via twitter">
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="7">
+        <mat-card class="custom-card">
+            <mat-card-header>
+                <mat-card-title>Signup</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <div>
+                        <div>
+                            <span for="fname" style="font-size: 18px; float: left; width: 50%;">First name</span>
+                            <span for="lname" style="font-size: 18px; float: right; width: 50%;">Last Name</span>
+                        </div>
+                        <div>
+                            <input type="text" name="fname" id="fname" placeholder="First name"
+                                style="width: 47% !important;">
+                            <input type="text" name="lname" id="lname" placeholder="Last name"
+                                style="width: 47% !important; margin-left: 15px;">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div>
+                        <div>
+                            <span style="width: 50%; float:left;">
+                                <label for="email" class="label">Email</label><br>
+                            </span>
+                            <span style="width: 30%; float:right;">
+                                <label for="dob" class="label">Date of birth</label>
+                            </span>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="email@mail.com"
+                                style="width: 60% !important;">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="date" name="dob" id="dob" style="width: 33% !important;">
+                        </div>
+                    </div><br>
+                    <div>
+                        <label for="phone" class="label">Phone</label><br>
+                        <input type="number" name="phone" id="phone" placeholder="Phone" appInputPhone>
+
+                        <mat-radio-group aria-label="Gender" style="margin-left: 10%;">
+                            <mat-radio-button value="male">Male</mat-radio-button>&nbsp;&nbsp;
+                            <mat-radio-button value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="label">Notification options</span><br>
+                        <mat-checkbox>Email</mat-checkbox><br>
+                        <mat-checkbox>Call</mat-checkbox><br>
+                        <mat-checkbox>SMS</mat-checkbox>
+                    </div>
+                    <div style="float: right;">
+                        <mat-checkbox>Agree with terms and conditions of F.R.I.E.N.D.S </mat-checkbox>
+                    </div><br><br>
+                    <div>
+                        <span style="float: left;">
+                            <button style="margin-left: 10px; background-color: #000c14; margin-bottom: 10px;"
+                                mat-raised-button>Signup</button>
+                        </span>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

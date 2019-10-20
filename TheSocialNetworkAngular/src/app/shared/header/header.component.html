@@ -1,11 +1,11 @@
-<mat-toolbar color="accent">
-    <mat-toolbar-row>
+<mat-toolbar style="background-color: #001929;">
+    <mat-toolbar-row >
         <span style="text-align: center;">
             F.R.I.E.N.D.S
         </span>
         <span class="fill-remaining-space"></span>
         <span>
-            <input type="search" name="searchUser" id="" class="search-bar-config">
+            <input type="search" name="searchUser" id="" class="search-bar-config" [placeholder]="placeholder">
         </span>
         <span class="fill-remaining-space"></span>
         <span *ngIf="userName">Hello, {{userName.split(' ')[0] | titlecase}} </span>
@@ -20,15 +20,15 @@
         <span class="fill-remaining-space"></span>
         <span style="margin-right: 1%;">
                 <mat-chip-list>
-                        <mat-chip color="accent" selected>
+                        <mat-chip style="background-color: #000c14;" selected>
                             <img src="../../../assets/bell.png" alt="" class="img-dimension-sm">&nbsp;
                             {{(numNotification)?numNotification:0}}
                         </mat-chip>
-                        <mat-chip color="accent" selected>
+                        <mat-chip style="background-color: #000c14;" selected>
                             <img src="../../../assets/friends.png" alt="" class="img-dimension-sm">&nbsp;
                             {{(request)?request:0}}
                         </mat-chip>
-                        <mat-chip color="accent" selected>
+                        <mat-chip style="background-color: #000c14;" selected>
                                 <img src="../../../assets/love.png" alt="" class="img-dimension-sm">&nbsp;
                                 {{(message)?message:0}}
                         </mat-chip>
@@ -38,7 +38,7 @@
     </mat-expansion-panel-header>
     <!-- <hr style="color: white; margin: 0px 0px 0px 0px;"> -->
     <br>
-    <mat-panel-description style="color: black;">
+    <mat-panel-description style="color: rgb(128, 89, 89);">
         <span>
             <button mat-mini-fab matBadge="22" matBadgePosition="above after" matBadgeSize="small">
                 <img src="../../../assets/love.png" class="img-dimension" alt="">

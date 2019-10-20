@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   @Input() message;
 
   isLoggedin:boolean = false;
+  placeholder:string="";
 
   constructor() { }
 
@@ -21,6 +22,11 @@ export class HeaderComponent implements OnInit {
     {
       this.isLoggedin = true;
       this.userName=localStorage.getItem("userInfo");
+      let i=100;
+      setInterval(()=>{
+        this.placeholder=`Search within ${i} F.R.I.E.N.D.S profiles`;
+        i+=9;
+      },1000);
     }
   }
 
